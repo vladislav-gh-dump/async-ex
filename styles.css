@@ -1,0 +1,64 @@
+:root {
+    --main-color: #70faac;
+    --bg-color: black;
+    --border-args: 2px solid var(--main-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    color: #70faac;
+    background-color: var(--bg-color);
+}
+
+html, body, main {
+    height: 100%;
+}
+
+body, main, .viewCode {
+    display: flex;
+}
+
+body, main {
+    align-items: center;
+}
+
+body {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    justify-content: space-evenly;
+}
+
+header, footer, main {
+    width: 100%;
+}
+
+header, footer {
+    font-weight: 600;
+    text-align: center;
+}
+
+header {
+    border-bottom: var(--border-args);
+
+    line-height: 3em;
+}
+
+footer {
+    border-top: var(--border-args);
+
+    font-size: 20px;
+    line-height: 2em;
+}
+
+
+main > * {
+    width: 40%;
+    height: 40%;
+
+    border: var(--border-args);
+}
