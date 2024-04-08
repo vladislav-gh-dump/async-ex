@@ -5,6 +5,8 @@
 }
 
 * {
+    font-family: 'Courier New';
+
     margin: 0;
     padding: 0;
 
@@ -16,7 +18,7 @@ html, body, main {
     height: 100%;
 }
 
-body, main, .viewCode {
+body, main, #buttons, #viewOutput {
     display: flex;
 }
 
@@ -30,7 +32,7 @@ body {
 }
 
 main {
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 header, footer, main {
@@ -55,10 +57,56 @@ footer {
     line-height: 2em;
 }
 
-
 main > * {
-    width: 40%;
-    height: 40%;
+    width: 200px;
+    height: 200px;
+
+    padding: 12px;
 
     border: var(--border-args);
+}
+
+#viewOutput, #viewCode {
+    margin: 1%;
+}
+
+#viewOutput {
+    overflow: auto;
+}
+
+#viewOutput::-webkit-scrollbar {
+    width: 4px;
+}
+
+#viewOutput::-webkit-scrollbar-thumb {
+    background-color: #70faac;
+}
+
+#viewOutput > #codeOutput {
+    width: 100%;
+}
+
+#viewOutput > #codeLines {
+    width: 16px;
+}
+
+#viewCode > hr {
+    margin: 4px 0;
+
+    border: 1px solid var(--main-color);
+}
+
+#buttons {
+    justify-content: end;
+}
+
+#buttons .run, #buttons .cls {
+    margin: 4px;
+    padding: 4px;
+
+    border: var(--border-args);
+}
+
+code {
+    font-size: 13px;
 }

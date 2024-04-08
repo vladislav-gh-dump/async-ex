@@ -15,16 +15,29 @@
 
     <main>
         <div id="viewCode">
-            <div id="buttonRun">
-                <button>btn</button>
+            <div id="buttons">
+                <button class="cls">cls</button>
+                <button class="run">run</button>
             </div>
+            <hr>
             <code>
-
+                console.log(1); 
+                <br><br>
+                setTimeout(() => {
+                    console.log(3)
+                    <br>}, 3000); 
+                <br><br>
+                console.log(2);
             </code>
         </div>
 
         <div id="viewOutput">
+            <code id="codeLines">
 
+            </code>
+            <code id="codeOutput">
+
+            </code>
         </div>
     </main>
 
